@@ -1,4 +1,4 @@
-# Terraform Automation Scripts
+# Terraform Awesome-Insane Automation Scripts
 
 This repository contains a collection of automation scripts designed to streamline Terraform project creation, template generation, deployment workflows, and diagrams generation. The scripts provide a structured approach to managing infrastructure as code across different environments.
 
