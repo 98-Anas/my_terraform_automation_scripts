@@ -1,0 +1,10 @@
+flowchart TD
+    A[Start] --> B[create_project.py]
+    B --> C{Environment?}
+    C -->|Pre-Prod| D[generate_pre-prod_templates.sh]
+    C -->|Prod| E[generate_prod_templates.sh]
+    D --> F[deploy_preprod.sh]
+    E --> G[deploy_prod.sh]
+    F --> H[Log to terraform_deploy.log]
+    G --> H
+    H --> I[End]
