@@ -1,0 +1,16 @@
+2025-06-29 11:20:34,943 - INFO - Initializing Project Manager
+2025-06-29 11:20:55,450 - INFO - Creating new project at /home/zonzo/workindir/test_aws_land_zone
+2025-06-29 11:23:27,596 - ERROR - Failed to setup project: Command '['/home/zonzo/my_automation_scripts/set_terraform_env.sh']' returned non-zero exit status 1.
+2025-06-29 11:28:25,267 - INFO - Initializing Project Manager
+2025-06-29 11:28:33,064 - INFO - Creating new project at /home/zonzo/workindir/test_aws_land_zone
+2025-06-29 11:30:02,592 - INFO - Initializing Project Manager
+2025-06-29 11:30:12,502 - INFO - Creating new project at /home/zonzo/workindir/test_aws_land_zone
+2025-06-29 11:30:12,543 - ERROR - Failed to setup project: Command '['/home/zonzo/my_automation_scripts/set_terraform_env.sh']' returned non-zero exit status 1.
+2025-06-29 11:31:25,741 - INFO - Initializing Project Manager
+2025-06-29 11:31:32,579 - INFO - Creating new project at /home/zonzo/workindir/test_aws_land_zone
+2025-06-29 11:34:08,713 - INFO - Generating pre-prod environment
+2025-06-29 11:34:22,579 - INFO - Formatting Terraform files
+2025-06-29 13:39:12,911 - INFO - Generating prod environment
+2025-06-29 13:39:20,174 - INFO - Formatting Terraform files
+2025-06-29 13:48:21,174 - INFO - Generating prod environment
+2025-06-29 13:48:27,514 - INFO - Formatting Terraform files
