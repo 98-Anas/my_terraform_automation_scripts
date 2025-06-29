@@ -1,0 +1,36 @@
+%% AWS Landing Zone Workflow Overview
+graph LR
+    A[Developer] -->|Commits Code| B[GitHub Repository]
+    B --> C{Trigger CI/CD}
+    
+    subgraph "Branching & Environments"
+        direction TB
+        D[Feature Branch] -->|PR| E[pre-prod Branch]
+        E -->|Merge| F[prod Branch]
+    end
+    
+    subgraph "CI/CD Pipeline (GitHub Actions)"
+        direction TB
+        C -->|pre-prod Push| G["Terraform Plan (pre-prod)"]
+        G --> H["Manual Approval"]
+        H --> I["Terraform Apply (pre-prod)"]
+        C -->|prod Merge| J["Terraform Plan (prod)"]
+        J --> K["Manual Approval"]
+        K --> L["Terraform Apply (prod)"]
+    end
+    
+    subgraph "AWS Infrastructure"
+        direction TB
+        I --> M["pre-prod Environment:
+                - 1 VPC
+                - 1 Public Subnet
+                - 1 EC2 Instance"]
+        L --> N["prod Environment:
+                - 1 VPC
+                - 2 Public Subnets
+                - 2 EC2 Instances
+                - S3 & CloudWatch Logging"]
+    end
+    
+    M -->|Validation| E
+    N -->|Monitoring| F
